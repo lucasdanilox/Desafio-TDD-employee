@@ -9,7 +9,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
-    @Query("SELECT d FROM Employee d ORDER BY d.name ASC")
-    Page<Employee> searchByName(String name, Pageable pageable);
 
 }
